@@ -31,17 +31,42 @@
 
 .header {
     max-width: 960px;
-    list-style: none;
+    /* list-style: none; */
     display: flex;
-    padding: 0;
     margin: 0 auto;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    border-right: 1px solid black;
+    padding: 5px 30px;
+}
+
+li:last-child {
+    border-right: none;
 }
 
 @media screen and (max-width: 767px) {
     .header {
+        display: block;
         flex-direction: column;
-        padding: 0 10px;
+        justify-content: flex-start;
     }
+
+    ul {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    li {
+        border-bottom: 1px solid black;
+        padding: 10px 10px;
+        border-right: none;
+    }
+
 }
